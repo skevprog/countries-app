@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes as Switch } from 'react-router-dom';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import Home from './pages/Home';
+import Search from './pages/Search';
 import './App.css';
 
 const client = new ApolloClient({ uri: 'https://countries.trevorblades.com/', cache: new InMemoryCache() });
@@ -13,6 +14,7 @@ function App() {
         <Router>
           <Switch>
             <Route path="/" element={<Home />} />
+            <Route path="/search" element={<Search />} />
           </Switch>
         </Router>
       </div>

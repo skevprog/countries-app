@@ -1,5 +1,6 @@
 import React from 'react';
 import { gql, useQuery } from '@apollo/client';
+import { Link } from 'react-router-dom';
 
 interface Country {
   name: string;
@@ -30,6 +31,7 @@ export default function Home() {
   return (
     <div>
       <h1>List of countries</h1>
+      <Link to="/search">Search for Country</Link>
       {renderCountries()}
     </div>
   );
